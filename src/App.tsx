@@ -1,7 +1,14 @@
 import "@mantine/core/styles.css";
-import { MantineProvider } from "@mantine/core";
+import {  MantineProvider, Title } from "@mantine/core";
 import { theme } from "./theme";
-
+import { ToDoList } from "./componentes/toDoList";
+import { ActionBar } from "./componentes/ActionBar";
 export default function App() {
-  return <MantineProvider theme={theme}>App</MantineProvider>;
+  return (
+    <MantineProvider theme={theme}>
+      <Title w={'fit-content'} m={'20px auto'}>Lista de Tarefas</Title>
+      <ActionBar/>
+      <ToDoList/>
+    </MantineProvider>
+  );
 }
